@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="facebook" sketch:type="MSLayerGroup" fill="#A8ABBC">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="facebook2">
+                    <path d="M9,0 C4.03742045,0 0,4.03742045 0,9 C0,13.962217 4.03742045,18 9,18 C13.962217,18 18,13.962217 18,9 C18,4.03742045 13.9629421,0 9,0 L9,0 L9,0 Z M11.238218,9.31684524 L9.77398695,9.31684524 L9.77398695,14.5357287 L7.60428583,14.5357287 L7.60428583,9.31684524 L6.57290744,9.31684524 L6.57290744,7.4723274 L7.60428583,7.4723274 L7.60428583,6.27926368 C7.60428583,5.42479658 8.01031177,4.08962378 9.79392572,4.08962378 L11.4017159,4.09578668 L11.4017159,5.88628857 L10.2347539,5.88628857 C10.0447918,5.88628857 9.774712,5.98126964 9.774712,6.38874567 L9.774712,7.47268992 L11.4278176,7.47268992 L11.238218,9.31684524 L11.238218,9.31684524 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,59 @@
+@import 'helper/variables';
+@import 'helper/mixins';
+
+@import 'base/normalize';
+@import 'base/base';
+
+//@import 'component/gridmixin';
+@import 'component/button';
+//@import 'component/track-template';
+@import 'component/jq-slider';
+@import 'component/pagination';
+
+@import 'section/layout';
+@import 'section/main';
+//@import 'section/sidebar';
+//@import 'section/player';
+
+//TODO: Dev - remove in production
+//@import 'helper/bp-overlay';
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+  display:    none;
+  position:   fixed;
+  z-index:    2;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
+  background: $background;
+}
+
+.modal img {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  margin-top: rempx(-82px);
+  margin-left: rempx(-22px);
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+  overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+  display: block;
+}
+
+*, *:before, *:after {
+  //background: rgba(255,255,255,0.1);
+}

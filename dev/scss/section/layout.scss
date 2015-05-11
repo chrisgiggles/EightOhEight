@@ -1,0 +1,217 @@
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  font-size: 14px;
+  background: $background;
+}
+
+#sidebar {
+  width: 20%;
+  z-index: 3; //Less than .modal
+  padding: 0 2.5%; //use padding for better scrollbars
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: scroll;
+
+  padding-bottom: 110px;
+
+  background: $sidebar;
+  border-right: 1px solid lighten($background, 5%);
+}
+
+#main {
+    width: 75%;
+    margin: 0 2.5% 0 22.5%; //right margin sidebar width + 2.5
+
+    padding-bottom: 110px;
+
+}
+
+#player {
+  position: fixed;
+  display: table;
+  z-index: 4; //larger than .modal
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include size(100%, 70px);
+  border-top: 1px solid lighten($background, 10%);
+  background: #323441;
+}
+
+
+#sidebar .logo {
+    @include img-force-full-width;
+}
+
+#sidebar nav {
+	margin-top: 30px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	@include font-size(13px);
+}
+
+#sidebar h2 {
+	@include font-size(12px);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 18px 0;
+	margin: 18px 0;
+	border-bottom: 1px solid $dark-hilight;
+}
+
+#sidebar a {
+    display: block;
+    font-weight: semibold;
+    font-weight: 500;
+    line-height: 24px;
+	color: $white;
+}
+
+#sidebar a:hover,
+#sidebar a:focus {
+	color: $hilight;
+	text-decoration: none;
+}
+
+#sidebar a.active {
+	color: $hilight;
+}
+
+/*
+Player
+*/
+
+#player .row {
+  display: table-row;
+}
+
+.player-songtitle {
+    display: table-cell;
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    height: 20px;
+	text-align: center;
+
+    & span {
+        font-size: 12px;
+        line-height: 20px;
+        color: $light-text;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    }
+}
+
+.player-controls {
+  display: table-cell;
+  vertical-align: top;
+  width: 36px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#toggle-playback {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-top: 5px;
+    background: url("../icons/ios7-play.svg") center center no-repeat;
+    background-size: contain;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &.playing {
+        background-image: url("../icons/ios7-pause.svg");
+    }
+}
+
+#progress-slider {
+  margin-top: 11px;
+  height: 10px;
+}
+
+#progress-slider .loading {
+  background: blue;
+}
+
+.player-meta {
+  display: table-cell;
+  vertical-align: top;
+  width: 175px;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.player-time {
+  font-size: 13px;
+}
+
+.player-volume-container {
+    opacity: 0;
+    transition: opacity 0.16s ease-out, height 0.25s ease-in;
+    transition-delay: 0.2s;
+
+    position: absolute;
+    bottom: 40px;
+    right: -8px;
+    height: 0px;
+    width: 43px;
+    background: url("../img/volume-container.svg") no-repeat center center;
+}
+
+.player-volume-button {
+    display: inline-block;
+    float: right;
+    position: relative;
+
+    &:hover > .player-volume-container {
+        height: 136px;
+        opacity: 1;
+    }
+}
+
+.player-mute {
+    display: inline-block;
+
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    transition: opacity 0.2 ease-in;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+a.volume-high{
+    background: url("../icons/volume-high.svg") center center no-repeat;
+    background-size: 24px 24px;
+}
+a.volume-medium{
+    background: url("../icons/volume-medium.svg") 2px 5px no-repeat;
+    background-size: 24px 24px;
+}
+a.volume-low{
+    background: url("../icons/volume-low.svg") 2px 5px no-repeat;
+    background-size: 24px 24px;
+}
+a.muted{
+    background: url("../icons/volume-mute.svg") center center no-repeat;
+    background-size: 24px 24px;
+}

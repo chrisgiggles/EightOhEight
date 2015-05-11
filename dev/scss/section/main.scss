@@ -1,0 +1,316 @@
+/*
+Track list
+*/
+
+.track-list-item {
+  display: table;
+  width: 100%;
+  height: 90px;
+  font-size: 0;
+
+  padding: 30px 0;
+  border-bottom: 1px solid $tracklist-line;
+}
+.track-list-item:last-child {
+  border: 0;
+}
+
+.track-list-item ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+//Picture and play button
+.track-image-container {
+  position: relative;
+  display: table-cell;
+  @include size(90px);
+}
+
+.track-image-container .track-image {
+  width: 90px;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  transition: all 0.4s ease;
+}
+
+.track-image-container .track-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  max-width: 100%;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.track-image-container:hover .track-play-icon,
+.track-active .track-play-icon {
+    opacity: 1;
+    z-index: 2;
+}
+
+.track-image-container:hover .track-image {
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+.track-image-container:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    z-index: 1;
+    background: $white;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.track-image-container:hover:after {
+    opacity: 0.1;
+}
+
+//Track information
+.track-list-info {
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    padding: 10px 15px;
+}
+
+.track-list-info a {
+    color: $tracklist-text;
+    display: inline-block;
+
+    &:hover {
+        color: $hilight;
+    }
+}
+
+.track-list-info h3 {
+    font-size: 20px;
+    display: inline-block;
+    margin: 0;
+
+    span {
+        font-weight: normal;
+    }
+}
+
+.track-list-info ul {
+    font-size: 13px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    a {
+        color: darken($tracklist-text, 20%);
+    }
+}
+
+.track-list-info ul li {
+    float: left;
+    margin-right: 20px;
+
+    img {
+        margin-right: 10px;
+        margin-top: -2px;
+        @include size(20px);
+    }
+}
+
+
+//Right side of tracklist
+.track-meta {
+    display: table-cell;
+    vertical-align: top;
+    width: 22.5%;
+    font-size: 11px;
+
+    ul {
+        margin-top: 5px;
+        overflow: auto;
+    }
+
+    li {
+        float: right;
+        margin: 2px 2px;
+        @include button(1, $tracklist-line, true);
+    }
+
+    img {
+        vertical-align: middle;
+        text-align: center;
+        margin-right: 8px;
+    }
+}
+
+/*
+Single track view
+*/
+
+.track-list-item.single-track {
+    height: auto;
+    border: none;
+}
+
+.single-track {
+
+    .single-track-left {
+        display: table-cell;
+        width: 250px;
+
+        .track-meta {
+            margin-top: 30px;
+            position: static;
+            display: block;
+            width: 100%;
+
+            ul {
+                position: static;
+                a {
+                    color: darken($tracklist-text, 20%);
+
+                    &:hover {
+                        color: $hilight;
+                    }
+                }
+            }
+
+            span {
+                font-size: 11px;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: lighten($tracklist-line, 10%);
+            }
+
+            li {
+                float: none;
+                font-size: 13px;
+                margin-right: 4px;
+                margin-top: 6px;
+
+                padding: 0;
+                background: none;
+
+                img {
+                    margin-right: 10px;
+                    margin-top: -2px;
+                    @include size(20px);
+                }
+            }
+
+            .track-genre {
+                margin-bottom: 20px;
+                li {
+                    float: none;
+                    font-size: 11px;
+                    margin-right: 4px;
+                    margin-top: 0;
+                    @include button(1, $tracklist-line, true);
+                }
+            }
+        }
+
+    }
+
+    .track-image-container {
+        @include size(250px);
+    }
+
+    .track-image-container .track-image {
+      width: 250px;
+    }
+
+    .single-track-right {
+        display: table-cell;
+        vertical-align: top;
+
+        .track-list-info {
+            padding: 10px 0 10px 30px;
+
+            ul {
+                position: static;
+                margin-top: 20px;
+            }
+        }
+
+        .posted,
+        .date {
+            display: block;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: lighten($tracklist-line, 10%);
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 14px;
+            color: $light;
+        }
+    }
+}
+
+.notice {
+    padding-top: 10px;
+    text-align: center;
+}
+
+/*********************************************************
+ * Custom, iPhone Retina
+ *********************************************************/
+@media only screen and (min-width : 320px) {
+
+}
+
+/*********************************************************
+ * Small - Phones
+ *********************************************************/
+@media only screen and (min-width : 480px) {
+
+}
+
+/*********************************************************
+ * Tablets
+ *********************************************************/
+@media only screen and (min-width : 768px) {
+
+}
+
+/*********************************************************
+ * Medium Tablet - Small Desktop
+ *********************************************************/
+@media only screen and (min-width : 992px) {
+
+}
+
+/*********************************************************
+ * Large Desktop
+ *********************************************************/
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*********************************************************
+ * Extra large Desktop
+ *********************************************************/
+@media only screen and (min-width : 1600px) {
+
+}

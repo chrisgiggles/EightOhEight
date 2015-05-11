@@ -1,0 +1,60 @@
+#player-controls {
+	position: fixed;
+    z-index: 4; //larger than .modal
+	bottom: 0;
+	left: 0;
+	@include size(100%, rempx(80px));
+	background: linear-gradient(to bottom, #41424D, #30313B);
+}
+
+.player-songtitle {
+	text-align: center;
+}
+
+.player-songtitle {
+	margin: rempx(5px) 0 rempx(3px) 0;
+}
+
+.player-control-buttons {
+	@include column(1);
+	//Override width and display type
+	display: inline-block;
+	width: rempx(104px);
+	margin-top: rempx(-14px);
+}
+
+.progress-container {
+	@include column(12);
+	width: 70%;
+}
+
+.player-info{
+	@include column(1);
+	//Override width and display type
+	float: right;
+	display: inline-block;
+	width: rempx(120px);
+}
+
+.player-volume-button {
+	position: relative;
+	display: inline-block;
+	margin-left: rempx(20px);
+}
+
+.player-volume-container {
+	position: absolute;
+	bottom: rempx(30px);
+	right: rempx(-12px);
+	height: rempx(136px);
+	width: rempx(43px);
+	background: url("../img/volume-container.svg") no-repeat center center;
+}
+
+#toggle-playback {
+	display:inline-block;
+
+	&.playing {
+		background:black;
+	}
+}

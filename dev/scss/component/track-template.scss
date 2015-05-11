@@ -1,0 +1,252 @@
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+/*   .track-container {
+    position: relative;
+    @include column(12);
+  }
+
+  .track-play {
+
+  }
+
+
+  .track-information h3 {
+    @include font-size(20px);
+    font-weight: bold;
+    font-weight: 500;
+    color: $white;
+
+    small {
+      @include font-size(20px);
+      font-weight: normal;
+      color: darken($white, 10%);
+    }
+  }
+
+  .track-information span {
+    color: $light;
+  }
+
+  .track-description {
+    color: $light;
+  }
+
+  .track-meta {
+    margin-top: 30px;
+  }
+
+  .track-meta ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .track-meta li {
+    float: left;
+    padding: 3px 5px;
+    margin-right: 10px;
+
+    background: lighten($background, 15%);
+    border-radius: 2px;
+  }
+
+  .track-meta .purchase {
+    float: right;
+  }*/
+} 
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+  .track-container {
+    @include column(12, 12);
+    float: none;
+    display: table;
+    padding: 15px 0;
+  }
+
+  .track-list-item {
+    height: 160px;
+    font-size: 0;
+
+    border-bottom: 1px solid $darker;
+  }
+
+  .track-list-item ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .track-container.track-list-item .track-play {
+    display: inline-block;
+    position: relative;
+  }
+
+  .track-container.track-list-item .track-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: rempx(-24px);
+    margin-left: rempx(-24px);
+
+    & img {
+      @include size(rempx(48px));
+    }
+  }
+
+  .track-play {
+    display: table-cell;
+    width: 160px;
+    height: 160px;
+  }
+
+  .track-play img {
+    max-width: 100%;
+  }
+
+
+
+  .track-list-info {
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .track-list-info a {
+    display: inline-block;
+  }
+
+  .track-list-info h3 {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .track-list-info ul {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .track-list-info ul li {
+    float: left;
+  }
+
+
+
+  .track-meta {
+    display: table-cell;
+    vertical-align: middle;
+    height: 140px;
+    width: 160px;
+    font-size: 16px;
+  }
+
+  .track-meta ul li {
+    margin: 15px 0;
+  }
+
+/*  .track-container.track-list-item:hover > .track-list-info{
+    opacity: 1;
+  }
+
+  .track-container.track-list-item .track-list-info {
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include size(100%);
+
+    background: transparentize($darkest, 0.08);
+  }*/
+
+/*   .track-container.track-list-item .track-play {
+    display: inline-block;
+    position: relative;
+  }
+
+  .track-container.track-list-item .track-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: rempx(-24px);
+    margin-left: rempx(-24px);
+
+    & img {
+      @include size(rempx(48px));
+    }
+  }
+
+  .track-container.track-list-item .track-list-info {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: rempx(140px);
+    width: 60%;
+  }
+
+  .track-container.track-list-item .track-meta {
+    position: absolute;
+    bottom: rempx(-10px); //Offset margin bottom on child li
+    left: 0;
+    
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 rempx(15px);
+
+    & li {
+      float: left;
+      margin-bottom: (10px);
+      margin-right: rempx(5px);
+
+      @include font-size(13px);
+      padding: 2px 8px;
+      border-radius: 100px;
+      background: lighten($background, 10%);
+    }
+  }
+
+  .track-container.track-list-item h3 {
+    margin: 0 rempx(15px);
+    @include font-size(18px);
+  }
+
+  .track-container.track-list-item a {
+    color: $light-text;
+    & .artist {
+      font-weight: normal;
+      color: $darker-text;
+    }
+    &:hover {
+      color: $white;
+      & .artist {
+        color: $white;
+      }
+    }
+  } */
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+@media only screen and (min-width : 1600px) {
+
+}
+

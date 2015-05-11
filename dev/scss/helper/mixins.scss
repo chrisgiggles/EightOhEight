@@ -1,0 +1,42 @@
+//Useful way to size elements
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+//Convert px to rem
+@function rempx($size) {
+	$rem: $size / 16px;
+	@return $rem * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: rempx($size);
+}
+
+@mixin img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin img-force-full-width{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+//Refactor this, doesn't work right now
+@mixin button($size, $color: $dark-hilight, $round: false) {
+	display: inline-block;
+	background: $color;
+	padding: ($size * 2px) ($size * 8px);
+
+	@if($round == false) {
+		border-radius: 4px;
+	}
+	@elseif($round == true) {
+		border-radius: 100px;
+	}
+}

@@ -1,0 +1,54 @@
+/*********************************************************
+ * Custom, iPhone Retina
+ *********************************************************/
+@media only screen and (min-width : 320px) {
+
+}
+
+/*********************************************************
+ * Small - Phones
+ *********************************************************/
+@media only screen and (min-width : 480px) {
+
+}
+
+/*********************************************************
+ * Tablets
+ *********************************************************/
+@media only screen and (min-width : 768px) {
+
+}
+
+/*********************************************************
+ * Medium Tablet - Small Desktop
+ *********************************************************/
+@media only screen and (min-width : 992px) {
+  .main {
+    padding-bottom: 120px;
+    @include column(10);
+    @include push(2);
+  }
+
+  #main-container {
+    //Semantic grid needs a row mixin for nested columns
+    @include row(12);
+  }
+
+  .main .pagination {
+    margin: 40px 0 0;
+  }
+}
+
+/*********************************************************
+ * Large Desktop
+ *********************************************************/
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*********************************************************
+ * Extra large Desktop
+ *********************************************************/
+@media only screen and (min-width : 1600px) {
+
+}

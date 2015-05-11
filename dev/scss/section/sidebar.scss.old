@@ -1,0 +1,10 @@
+.sidebar {
+	position: fixed;
+    @include column(2);
+	height: 100%;
+	background: $background;
+	padding-top: rempx(30px);
+	overflow-x: scroll;
+	padding-bottom: rempx(100px); //Same height as player widget + 20px, for scrolling
+
+}

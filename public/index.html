@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- favicons -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="favicon/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="favicon/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="favicon/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
+	<link rel="apple-touch-icon" href="favicon/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="favicon/favicon-144.png">
+	<meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <!-- End favicons -->
+    <title>EightOhEight</title>
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Muli:400,600,700">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<section id="sidebar">
+    <nav>
+        <a href="#"><img src="img/logo.svg" class="logo"></a>
+        <ul>
+            <h2>Filter</h2>
+            <li><a href="#" data-page="all">All</a></li>
+            <li><a href="#artist" data-page="artist">Artist</a></li>
+            <li><a href="#genre" data-page="genre">Genre</a></li>
+
+            <h2>Menu</h2>
+            <li><a href="#about" data-page="about">About this project</a></li>
+            <li><a href="#credits" data-page="credits">Credits</a></li>
+
+            <h2>Social</h2>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Soundcloud</a></li>
+        </ul>
+
+    </nav>
+</section>
+
+<section id="main">
+
+</section>
+
+<div class="modal"><img src="img/puff.svg" alt=""/></div>
+
+<!-- THE PLAYER CONTROLS -->
+<div id="player">
+    <div class="player-songtitle row">
+
+    </div>
+    <div class="row">
+        <div class="player-controls">
+            <!--
+            Change to css backgrounds instead of imgs
+            In JS we just change the class, the CSS handles what is displayed
+             -->
+            <a href="#" id="toggle-playback"></a>
+        </div>
+        <!-- end player controls -->
+
+        <div id="progress-slider"></div>
+        <!-- end player progress -->
+        <div class="player-meta">
+            <span class="player-time"><span id="player-position">0:00</span> / <span id="player-duration">0:00</span></span>
+            <div class="player-volume-button">
+              <a href="#" class="player-mute volume-high"></a>
+              <div class="player-volume-container">
+                <div id="volume-slider"></div>
+              </div>
+            </div>
+        </div>
+        <!-- end player volume and timer -->
+    </div>
+</div>
+
+<script src="js/soundmanager2.js"></script>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
