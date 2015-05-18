@@ -14,3 +14,4 @@ Thumbs.db
 .sass-cache
 inc/options.php
 node_modules
+public/js/player.js

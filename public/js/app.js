@@ -248,7 +248,10 @@
             id = id || global.currentTrackId;
 
             //Toggle or play
-            if ( id === global.currentTrackId ) {
+            if ( !id ) {
+                return;
+            }
+            else if ( id === global.currentTrackId ) {
                 soundManager.getSoundById( id ).togglePause();
             }
             else {
