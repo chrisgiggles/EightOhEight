@@ -32,7 +32,7 @@ if ( $_GET['track_id'] && is_numeric($_GET['track_id']) ) {
             $data['artwork'] = str_replace( 'large', 't500x500', $json_data['artwork_url'] );
             $data['soundcloud_url'] = $json_data['permalink_url'];
             $data['stream_url'] = http_parse_headers($stream_header)['Location'];
-
+            
             $template = new Template();
             echo $template->singleTrack($data);
         }
