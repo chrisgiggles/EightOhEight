@@ -1,5 +1,14 @@
 <?php
 
+if ( isset($_GET['id']) ) {
+    $track = $_GET['id'];
+
+
+}
+else {
+    header('Location: index.php');
+}
+
 if ( isset($_POST['submit_track']) ) {
     $data = array();
 
@@ -72,4 +81,5 @@ if ( isset($_POST['submit_track']) ) {
             <li><input type="submit" name="submit_track" value="Submit"></li>
         </ul>
     </form>
+    <a href="logout.php">Log out</a>
 </div>

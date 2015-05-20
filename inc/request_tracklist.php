@@ -5,7 +5,7 @@ include_once('db_connect.php');
 include_once('functions.php');
 include_once('template.php');
 
-if ( $_GET['page'] && is_numeric($_GET['page']) ) {
+if ( isset($_GET['page']) && is_numeric($_GET['page']) ) {
     $page = $_GET['page'];
     $items_per_page = 8;
     $offset = ($page - 1) * $items_per_page;
